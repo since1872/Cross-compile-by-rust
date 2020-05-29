@@ -1,0 +1,32 @@
+[target.aarch64-unknown-linux-musl]
+linker = "aarch64-linux-musl-gcc"
+rustflags = ["-Clink-arg=-lgcc"]
+
+[target.arm-unknown-linux-musleabi]
+linker = "arm-linux-musleabi-gcc"
+
+[target.arm-unknown-linux-musleabihf]
+linker = "arm-linux-musleabihf-gcc"
+
+[target.i686-unknown-linux-musl]
+linker = "i686-linux-musl-gcc"
+
+[target.mips-unknown-linux-musl]
+linker = "mips-linux-musl-gcc"
+rustflags = ["-Ctarget-feature=+crt-static","-Clink-arg=-lgcc","-Clink-arg=-s"]
+
+[target.mipsel-unknown-linux-musl]
+linker = "mipsel-linux-musl-gcc"
+rustflags = ["-Ctarget-feature=+crt-static","-Clink-arg=-lgcc","-Clink-arg=-s"]
+
+[target.mips64-unknown-linux-muslabi64]
+linker = "mips64-linux-musl-gcc"
+rustflags = ["-Clink-arg=-lgcc"]
+
+[target.mips64el-unknown-linux-muslabi64]
+linker = "mips64el-linux-musl-gcc"
+rustflags = ["-Clink-arg=-lgcc"]
+
+[target.x86_64-unknown-linux-musl]
+linker = "x86_64-linux-musl-gcc"
+rustflags = ["-Clink-arg=-lc"]
