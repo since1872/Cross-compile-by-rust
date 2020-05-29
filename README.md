@@ -7,4 +7,5 @@
 4.  add all target platform     $rustup target add all
 5.  set toolchain               $mv /.musl_cc ~/.musl_cc
 7.  add musl to path env        $echo 'source /home/$user/.musl_cc/env' >> ~/.profile
-6.  download toolchain          $sh fetch.sh
+6.  download toolchain          $cd /.musl_cc/toolchainsh && sh fetch.sh
+7.  helloe world                $cargo build --target arm-unknown-linux-musleabi (--release)
